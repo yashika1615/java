@@ -1,0 +1,148 @@
+two pointer
+arr[]={1,2,3,4,5,6}
+k=6
+
+complexity: O(N^2)
+
+pairSum(int arr[],int n, int k){
+    for(int i=0; i<n; i++){
+        for(int j=i+1; j<n; j++){
+            if(arr[i]+arr[j]==k)
+             return true;
+   if(arr[i]+arr[j]>k)
+            return false;
+        }     
+    }
+}
+
+
+complexity: O(N)
+pairSum(int arr[] int n, int k){
+    int i=0, j=n-1;
+   while(i<j){
+      if(arr[i]+Arr[j]==k)
+        return true;
+    else if(arr[i]+arr[j]<k)
+      i++;
+    else
+     j--;
+   }
+    return false;
+}
+ 
+
+//move all zeroes to end of array 
+arr[]={1,0,2,0,3,0}
+output= 1 2 3 0 0 0
+
+moveZero(int arr[], int n){
+
+  int j=0;
+  for(int i=0; i<n; i++)
+     if(arr[i]!=0 && arr[j]==0)
+       int temp=arr[i];
+       arr[i]=arr[j];
+       arr[j]=temp;
+}
+  if(arr[j]!=0) {
+   j++;
+  }
+
+
+//rearrange an array in max min form
+arr[]={1,2,3,4,5,6}
+o/p= 6 1 5 2 4 3
+
+arr[]={1,2,3,4,5,6,7}
+o/p= 7 1 6 2 5 3 4
+
+
+
+
+// frequency array
+arr[]={1,1,2,2,3,3,4,4};
+
+complexity: O(N^2)
+boolean visited[]=new boolean[arr.length];
+for(int i=0; i<n;i++){
+  count=0;
+   if(visited[i]==true)
+   continue;
+}
+ for(int j=i+1; j<n; j++){
+     if(arr[i]==arr[j])
+     visited[j]==true;
+
+     count++;
+ }
+ sop(arr[i]+""+count);
+ 
+
+ O(N)
+ //using hashmap
+ HashMap<Integer, Integer> hm=new HashMap<>();
+ for(int i=0; i<n; i++){
+      if(hm.containsKey(Arr[i]))
+      hm.put(arr[i],hm.get(arr[i])+1);
+    else
+    hm.put(arr[i],1);
+  //hm.put(arr[i], hm.getOrdDefault(arr[i],0)+1);
+ }
+
+
+ //prefix arrays
+ 1. Prefix Sum
+  arr[]={1,2,3,4,5}
+  output= 1 3 6 10 15
+
+  Complexity: O(N^2)
+  for(int i=0; i<n; i++)
+   sum=0;
+   for(int j=0; j<=i; j++)
+    sum+= arr[j];
+  sop(sum)
+  }
+
+  complexity:O(N)
+  sop(arr[0]);
+  for(int j=1; j<n; j++)
+      arr[j]=arr[j-1]+arr[j]
+    sop(arr[j]);
+
+
+//sum of arrays between indices L and R
+int arr[]={1,2,3,4,5,6};
+int arr1[][] ={{1,6},{2,4},{4,5},{0,3}};
+output= 21 9 9 15
+
+complexity:O(N^2)
+for(int i=0;i<arr1.length; i++)
+   sum=0;
+  for(int j=arr1[i][0]; j<=arr1[i][1]; j++)
+   sum+=arr[j+1];
+  }
+  sop(sum);
+
+complexity:O(N+M)
+
+int arr[]={1,2,3,4,5,6}
+int arr[][]={{1,6},{2,4},{4,5},{1,5}};
+
+int prefix[]=new int[arr.length+2];
+for(int j=1; j<n; j++)
+   prefix[j]= prefix[j-1]+arr[j];
+
+  for(int i=0; i<arr1.length; i++)
+   int L=arr1[i][0];
+  int R=arr1[i][1];
+  sop(prefix[R]-prefix[L-1]);
+  }
+
+
+
+//find array is equilibrium or not
+arr[]={7,2,1,5,4};
+output=2;
+
+
+
