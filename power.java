@@ -1,4 +1,4 @@
-package Recursion;
+
 import java.util.Scanner;
 public class power {
     int powern(int n){
