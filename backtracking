@@ -1,0 +1,29 @@
+arrangements(String str[], int n){
+    if(n==str.length){
+        if(!middleelement(str))
+        for(String:str){
+            sop(s);
+            sop();
+        }
+        else{
+            for(int i=n ;i<str.length; i++){
+                swap(str,n,i);
+                arrangements(str,n+1);
+                swap(str,n,i);
+            }
+        }
+    }
+    swap(String str[], int n, int i){
+        String temp= str[n];
+        str[n]=str[i];
+        str[i]=temp;
+    }
+
+}
+
+
+
+nqueens
+rat in a maze
+knight tour
+sudoku
